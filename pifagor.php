@@ -24,11 +24,14 @@ for ($i=1;$i<=$_POST['tr'];$i++)
     echo "\t<tr>\n";
     for ($t=1;$t<=$_POST['td'];$t++)
     {
-
-            echo "\t\t<td>";
-            if ($t==1)
+            if ($t==1 OR $i==1)
             {
+                echo "\t\t<td class='first'>";
                 echo "&nbsp;";
+            }
+            else
+            {
+                echo "\t\t<td>";
             }
             echo $i*$t;
             if ($t==1)
